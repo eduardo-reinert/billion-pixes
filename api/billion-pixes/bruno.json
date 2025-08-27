@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "billion-pixes",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
