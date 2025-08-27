@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import MainLayout from "./MainLayout";
 
 function HomePage() {
@@ -13,12 +14,15 @@ function HomePage() {
               The way of surfing through street arts around the world.
             </p>
             <div className="flex gap-4 items-center text-center">
+              <Link to="/signup">
               <a
                 href=""
                 className="text-sm md:text-base bg-orange-500 border border-orange-500 rounded text-white font-bold py-2 px-6 hover:bg-orange-600"
               >
                 Get started - it's free
               </a>
+              </Link>
+              
             </div>
           </div>
         </div>

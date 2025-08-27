@@ -36,12 +36,14 @@ export default function Navbar() {
         </nav>
         <div className="flex ml-0 md:ml-auto gap-2 md:gap-8 items-center">
           {isLoggedIn || (
-            <a
-              href="/login"
-              className="text-sm md:text-base bg-orange-500 rounded text-white font-bold py-2 px-6 hover:bg-orange-600"
-            >
-              Login / Sign up
-            </a>
+            <Link to="signin">
+              <a
+                href=""
+                className="text-sm md:text-base bg-orange-500 rounded text-white font-bold py-2 px-6 hover:bg-orange-600"
+              >
+                Login / Sign up
+              </a>
+            </Link>
           )}
         </div>
       </div>
