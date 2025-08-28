@@ -20,4 +20,10 @@ public class GlobalExceptionHandler {
         ApiError error = new ApiError(e.getMessage(), "ARGUMENT_NOT_VALID", HttpStatus.UNAUTHORIZED.value());
         return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
     }
+
+    @ExceptionHandler(PostgresException.class)
+    public ResponseEntity<ApiError> handlePostgresException(PostgresException e) {
+        ApiError error = new ApiError(e.getMessage(), "POSTGRES_EXCEPTION", HttpStatus.INTERNAL_SERVER_ERROR.value());
+        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }
